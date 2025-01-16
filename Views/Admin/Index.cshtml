@@ -1,0 +1,47 @@
+﻿
+<div class="row justify-content-center adminDashboard">
+    <div class="col-md-6 text-white my-3 text-center adminInfo">
+<h1>Welcome to Admin Dashboard</h1>
+<p>Here you can:</p>
+<ul class="no-bullets">
+    <li>View all orders</li>
+    <li>View orders with enddate today</li>
+    <li>Increment instock order of a travelpackage</li>
+    <li>Delete orders</li>
+    <li>Set orders activestatus to false</li>
+</ul>
+
+        <button class="btn btn-primary my-3"><a href="@Url.Action("ExistingOrders", "Admin")" style="color: black;">View all customers and orders</a></button>
+
+        <button class="btn btn-primary my-3"><a href="@Url.Action("EndingToday", "Admin")" style="color: black;">View all orders ending today</a></button>
+
+        <button class="btn btn-primary my-3"><a href="@Url.Action("IncrementStock", "Admin")" style="color: black;">Increment Stock</a></button>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer class="border-top footer text-muted text-white">
+    <div class="text-white">
+        &copy; 2024 - VoyaVista - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+
+    <div class="socialIconsDivision">
+        <i class="bi bi-instagram fs-5 text-white"></i>
+        <i class="bi bi-facebook fs-5 text-white"></i>
+        <i class="bi bi-twitter-x fs-5 text-white"></i>
+        <i class="bi bi-tiktok fs-5 text-white"></i>
+    </div>
+
+    <div class="paymentIconsDivision">
+        <img class="img-fluid" src="https://brandlogos.net/wp-content/uploads/2016/07/mastercard-vector-logo-400x400.png" />
+        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4fzD_2wlaVx71EqR_AtxYfDH4gPk61xvBg&s" />
+        <img class="img-fluid" src="https://avatars.githubusercontent.com/u/10061420?s=400&v=4" />
+    </div>
+
+</footer>

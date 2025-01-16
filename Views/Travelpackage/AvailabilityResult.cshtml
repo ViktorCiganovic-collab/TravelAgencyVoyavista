@@ -1,0 +1,26 @@
+﻿@{
+    var data = (dynamic)ViewData.Model;
+}
+
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-6 col-xs-8 text-white">
+
+<h2>Availability Check</h2>
+<p>Travel Package ID: @data.TravelpackageId</p>
+<p>Start Date: @data.StartDate.ToShortDateString()</p>
+<p>End Date: @data.EndDate.ToShortDateString()</p>
+<p>Available Rooms: @data.AvailableRooms</p>
+
+@if (data.AvailableRooms > 0)
+{
+    <p class="text-success">Rooms are available for your selected dates!</p>
+            <a href="@Url.Action("Rent", "Order", new { id = data.TravelpackageId })" class="btn btn-success my-3">Book Now</a>
+}
+else
+{
+    <p class="text-danger">Sorry, no rooms are available for your selected dates.</p>
+}
+
+</div>
+</div>

@@ -1,0 +1,67 @@
+﻿
+@model List<TravelAgencyVoyavista.Models.Order>
+
+<h1 class="text-center text-white">All orders</h1>
+
+
+<div class="row justify-content-center existingOrdersSection">
+    <div class="col-md-10 col-xs-12">
+        <div class="table-responsive">
+        <table class="table table-striped text-white">
+    <thead>
+        <tr>
+            <th>Firstname </th>
+            <th>Familyname</th>
+            <th>Travelpackage</th>
+            <th>Paymentstatus</th>
+            <th>Orderactive</th>
+            <th>Startdate</th>
+            <th>Enddate</th>
+            <th>Delete booking</th>
+        </tr>
+    </thead>
+
+            <tbody class="">
+        @foreach (var customer in Model)
+        {
+                    <tr class="text-white">
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.Travelpackage.Name</td>
+            <td>@customer.paymentStatus</td>
+            <td>@customer.orderActive</td>
+                            <td>@customer.StartDate.ToString("yyyy-MM-dd")</td>
+                            <td>@customer.EndDate.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                <form asp-action="Delete" method="post" asp-route-id="@customer.OrderId">
+            <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+        </tr>
+        }
+        </tbody>
+</table>
+    </div>
+    </div>
+</div>
+
+
+<footer class="border-top footer text-muted text-white">
+    <div class="text-white">
+        &copy; 2024 - VoyaVista - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+
+    <div class="socialIconsDivision">
+        <i class="bi bi-instagram fs-5 text-white"></i>
+        <i class="bi bi-facebook fs-5 text-white"></i>
+        <i class="bi bi-twitter-x fs-5 text-white"></i>
+        <i class="bi bi-tiktok fs-5 text-white"></i>
+    </div>
+
+    <div class="paymentIconsDivision">
+        <img class="img-fluid" src="https://brandlogos.net/wp-content/uploads/2016/07/mastercard-vector-logo-400x400.png" />
+        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4fzD_2wlaVx71EqR_AtxYfDH4gPk61xvBg&s" />
+        <img class="img-fluid" src="https://avatars.githubusercontent.com/u/10061420?s=400&v=4" />
+    </div>
+
+</footer>

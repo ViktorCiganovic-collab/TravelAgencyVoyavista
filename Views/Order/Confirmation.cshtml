@@ -1,0 +1,141 @@
+﻿@model TravelAgencyVoyavista.Models.Order
+
+@{
+    Layout = "_Layout";
+}
+
+<!-- Page Header -->
+<h2 class="text-white">Thanks for your order. Here are the details of your order:</h2>
+
+<!-- Order Details -->
+<div class="bg-dark text-white p-4 rounded">
+    <p><strong>Package:</strong> @Model.Travelpackage.Name</p>
+    <p><strong>Order ID:</strong> @Model.OrderId</p>
+    <p><strong>Travel Package ID:</strong> @Model.TravelpackageId</p>
+    <p><strong>Rental Period:</strong> @Model.StartDate.ToShortDateString() - @Model.EndDate.ToShortDateString()</p>
+    <p><strong>Total Cost:</strong> @Model.TotalCost.ToString("C")</p>
+    <p>If you have any questions, please provide your order ID.</p>
+</div>
+
+<!-- Stripe Payment Form Section -->
+<h3 class="text-white my-4">Complete Your Payment</h3>
+<div class="bg-dark text-white p-4 rounded">
+    <form id="payment-form">
+        <div id="card-element" class="form-control">
+            <!-- A Stripe Element will be inserted here -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert" class="text-danger my-2"></div>
+
+        <button type="submit" id="submit" class="btn btn-primary my-3">
+            Pay @Model.TotalCost.ToString("C")
+        </button>
+    </form>
+</div>
+
+<!-- Back to Main Page Link -->
+<a href="@Url.Action("Index", "Home")" class="btn btn-success my-2">Back to Main Page</a>
+
+<script src="https://js.stripe.com/v3/"></script>
+<!-- Keep the existing HTML structure and footer from your code -->
+<script src="https://js.stripe.com/v3/"></script>
+<!-- Keep the existing HTML structure and footer from your code -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe('pk_test_51QezsBKfpgfUfOSHUfaVmdDwoStl2MTjNGBLi0awJSe1C6kDGYj9QLNy2t4ROEbZmqMhb4IAnw8JVyxv5W6JQHfk00VEPGhTGe'); //stripe publishable key
+    var elements = stripe.elements();
+
+    var card = elements.create('card', {
+        style: {
+            base: {
+                color: "#fff",
+                backgroundColor: "#333",
+                fontSize: "16px",
+                lineHeight: "24px",
+                padding: "10px",
+                borderRadius: "4px",
+                "::placeholder": {
+                    color: "#aaa"
+                }
+            },
+            invalid: {
+                color: "#dc3545",
+            }
+        }
+    });
+
+    card.mount('#card-element');
+
+    // Handle form submission
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+
+        // Call the backend to process the payment
+        var response = await fetch('/payment/ProcessPayment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                orderId: @Model.OrderId,
+                amount: @Model.TotalCost
+            })
+        });
+
+        var result = await response.json();
+
+        // Check if there was an error in the response
+        if (result.error) {
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error;
+            return;
+        }
+
+        // Confirm the payment using the client secret returned
+        var paymentResult = await stripe.confirmCardPayment(result.clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: '@Model.FirstName @Model.LastName',
+                },
+            },
+        });
+
+        if (paymentResult.error) {
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = paymentResult.error.message;
+        } else {
+            if (paymentResult.paymentIntent.status === 'succeeded') {
+                // Redirect to Payment Success page on successful payment
+                window.location.href = '@Url.Action("PaymentSuccess", "Payment", new { orderId = @Model.OrderId })';
+            }
+        }
+    });
+</script>
+
+
+
+
+<!-- Footer Section -->
+<footer class="border-top footer text-muted text-white">
+    <div class="text-white">
+        &copy; 2024 - VoyaVista - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white">Privacy</a>
+    </div>
+
+    <div class="socialIconsDivision">
+        <i class="bi bi-instagram fs-5 text-white"></i>
+        <i class="bi bi-facebook fs-5 text-white"></i>
+        <i class="bi bi-twitter-x fs-5 text-white"></i>
+        <i class="bi bi-tiktok fs-5 text-white"></i>
+    </div>
+
+    <div class="paymentIconsDivision">
+        <img class="img-fluid" src="https://brandlogos.net/wp-content/uploads/2016/07/mastercard-vector-logo-400x400.png" />
+        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4fzD_2wlaVx71EqR_AtxYfDH4gPk61xvBg&s" />
+        <img class="img-fluid" src="https://avatars.githubusercontent.com/u/10061420?s=400&v=4" />
+    </div>
+</footer>
+

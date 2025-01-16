@@ -1,0 +1,48 @@
+﻿@model TravelAgencyVoyavista.Models.Travelpackage
+
+<div class="row my-5">
+
+	<div class="col-md-6 text-center d-flex flex-column gap-3 justify-content-center text-white">
+
+		<h1><strong> @Model.Name</strong></h1>
+		<p>Location:<strong> @Model.Location</strong></p>
+		<p>Price/night:<strong> $@Model.Price</strong></p>
+		<p class="roomsInfo">Number of rooms: <strong> @Model.Availablerooms</strong>
+			<a asp-controller="Travelpackage" asp-action="CheckAvailability" asp-route-id="@Model.TravelpackageId">
+			<span class="info">ⓘ			
+				<span>Check room availability for your selected dates by clicking here.</span>			
+			</span>
+			</a>
+		</p>
+	</div>
+
+	<div class="col-md-6">
+
+		@foreach (var image in Model.Images)
+		{
+			<img src="@image.ImgURL" class="travelPackageImg img-fluid mt-2" />
+		}
+
+	</div>
+</div>
+
+
+<footer class="border-top footer text-muted text-white">
+	<div class="text-white">
+		&copy; 2024 - VoyaVista - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+	</div>
+
+	<div class="socialIconsDivision">
+		<i class="bi bi-instagram fs-5 text-white"></i>
+		<i class="bi bi-facebook fs-5 text-white"></i>
+		<i class="bi bi-twitter-x fs-5 text-white"></i>
+		<i class="bi bi-tiktok fs-5 text-white"></i>
+	</div>
+
+	<div class="paymentIconsDivision">
+		<img class="img-fluid" src="https://brandlogos.net/wp-content/uploads/2016/07/mastercard-vector-logo-400x400.png" />
+		<img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4fzD_2wlaVx71EqR_AtxYfDH4gPk61xvBg&s" />
+		<img class="img-fluid" src="https://avatars.githubusercontent.com/u/10061420?s=400&v=4" />
+	</div>
+
+</footer>

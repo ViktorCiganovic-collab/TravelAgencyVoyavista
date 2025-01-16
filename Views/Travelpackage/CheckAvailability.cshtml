@@ -1,0 +1,31 @@
+﻿@model TravelAgencyVoyavista.Models.Travelpackage
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-6 col-xs-8 text-white">
+
+        <h3>@Model.Name</h3>
+
+        <form method="post" asp-action="CheckAvailability">
+            <input type="hidden" name="TravelpackageId" value="@Model.TravelpackageId" />
+            <div class="form-group mb-3">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" class="form-control" required onchange="setEndDateMin()">
+            </div>
+            <div class="form-group mb-3">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Check Availability</button>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    function setEndDateMin() {
+        var startDate = document.getElementById('startDate').value;
+        var endDate = document.getElementById('endDate');
+        endDate.min = startDate;
+    }
+</script>
+

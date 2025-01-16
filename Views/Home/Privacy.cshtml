@@ -1,0 +1,238 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+<div class="hero-container">
+    <div class="overlay"></div>
+    <img class="img-fluid hero" src="https://www.travelbeyond.se/media/46692816/mv_four_seasons_private_island_aerial_web.jpg?rmode=crop&ranchor=center&width=1920&height=1080&quality=90&upscale=true&rnd=638308998388430000" />
+    <div class="hero-text">
+        <h1 class="heading display-4">@ViewData["Title"]</h1>
+    </div>
+</div>
+
+@* 
+<div class="row">
+    <div class="col-xl-12 col-md-12 col-sm-12">
+        <h1 class="heading display-4">@ViewData["Title"]</h1>
+        <img class="img-fluid hero" src="https://s1.1zoom.me/b4065/93/Maldives_Tropics_Coast_Bungalow_Palms_552239_1920x1080.jpg" />
+</div>
+</div> *@
+
+<section class="accordion_section">
+    <div class="container text-white">
+        <div class="row text-white">
+            <!-- Column 1: Information We Collect -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Information We Collect</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We may collect the following types of information:
+                    <strong>Personal Information</strong>
+                    When you visit our site or use our services, we may collect personal details such as:
+                    <ul>
+                        <li>Name</li>
+                        <li>Phone Number</li>
+                        <li>Mailing address</li>
+                        <li>Payment Information (e.g. credit card details)</li>
+                    </ul>
+                    <strong>Non-Personal Information</strong>
+                    We also collect non-personally identifiable information to improve your user experience:
+                    <ul>
+                        <li>Browser type and version</li>
+                        <li>IP address</li>
+                        <li>Device information</li>
+                        <li>Referral sources</li>
+                        <li>Pages visited</li>
+                        <li>Search queries</li>
+                    </ul>
+                    <strong>Cookies</strong>
+                    Our website uses cookies and similar technologies to enhance your experience, analyze usage, and track user behavior. You can manage cookie settings through your browser, but some features of the site may not work without them.
+                </div>
+            </div>
+
+            <!-- Column 2: How We Use Your Information -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>How We Use Your Information</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We use the information we collect for the following purposes:
+                    <ul>
+                        <li><strong>To provide and improve our services:</strong> Deliver the content and features you request and improve our offerings.</li>
+                        <li><strong>To process payments:</strong> For transactions such as purchasing products or services, or making donations.</li>
+                        <li><strong>To communicate with you:</strong> Send emails, newsletters, and marketing materials (if you have opted in).</li>
+                        <li><strong>To personalize your experience:</strong> Offer tailored content and recommendations based on your preferences and browsing behavior.</li>
+                        <li><strong>To comply with legal obligations:</strong> We may need to use your information to comply with applicable laws or regulations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 3: Data Security -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Data Security</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We take your privacy and data security seriously and use various measures to protect your personal information:
+                    <ul>
+                        <li><strong>Encryption:</strong> We use encryption technology to secure your personal and payment information during transmission.</li>
+                        <li><strong>Secure Storage:</strong> Personal data is stored in secure servers with access limited to authorized personnel only.</li>
+                        <li><strong>Two-Factor Authentication:</strong> We may implement two-factor authentication to enhance the security of your account.</li>
+                        <li><strong>Regular Audits:</strong> We perform regular security audits to ensure the integrity of our systems and protect against unauthorized access.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-white">
+            <!-- Column 4: Cookies and Tracking Technologies -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Cookies and Tracking Technologies</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We use cookies and other tracking technologies to improve your browsing experience and gather data for analytics:
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> These cookies are necessary for the operation of our website and services (e.g., for session management).</li>
+                        <li><strong>Analytics Cookies:</strong> We use third-party services like Google Analytics to track usage patterns and improve our website.</li>
+                        <li><strong>Advertising Cookies:</strong> These cookies help us serve relevant ads to you based on your interests.</li>
+                        <li><strong>Opt-out:</strong> You can manage your cookie preferences in your browser settings and opt out of certain cookies.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 5: Third-Party Services -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Third-Party Services</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We may share your information with third-party service providers to help us deliver services and products:
+                    <ul>
+                        <li><strong>Payment Processors:</strong> Your payment information may be shared with trusted payment gateways like Stripe for processing transactions.</li>
+                        <li><strong>Marketing Partners:</strong> We may collaborate with marketing agencies to send you promotional offers or newsletters.</li>
+                        <li><strong>Analytics Providers:</strong> Third-party services such as Google Analytics may be used to track website usage and improve user experience.</li>
+                        <li><strong>Legal Requirements:</strong> We may share information with third parties if required by law, or to enforce our legal rights and agreements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 6: Data Retention -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Data Retention</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy:
+                    <ul>
+                        <li><strong>Account Information:</strong> We will keep your account details as long as your account remains active or as required by law.</li>
+                        <li><strong>Payment Records:</strong> Payment-related information may be retained for financial or legal reporting purposes.</li>
+                        <li><strong>Marketing Data:</strong> Information used for marketing purposes may be retained as long as you do not opt out or unsubscribe.</li>
+                        <li><strong>Deletion Requests:</strong> You can request the deletion of your data, subject to any legal or operational obligations we may have.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-white">
+            <!-- Column 7: Your Rights -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Your Rights</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    Depending on your location, you may have certain rights over your personal data:
+                    <ul>
+                        <li><strong>Access:</strong> You have the right to request access to the personal data we hold about you.</li>
+                        <li><strong>Correction:</strong> You can update or correct any inaccurate or outdated information.</li>
+                        <li><strong>Deletion:</strong> You can request that we delete your personal information, subject to certain exceptions.</li>
+                        <li><strong>Opt-Out:</strong> You can opt-out of marketing communications by clicking unsubscribe links or contacting us directly.</li>
+                        <li><strong>Data Portability:</strong> You may request to receive your data in a structured, commonly used format.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 8: Children’s Privacy -->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Children’s Privacy</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    Our services are not intended for children under the age of 13, and we do not knowingly collect personal data from children:
+                    <ul>
+                        <li><strong>Age Restrictions:</strong> Users must be at least 13 years old to use our services.</li>
+                        <li><strong>Parental Consent:</strong> If we learn that a child has provided us with personal data, we will delete it promptly.</li>
+                        <li><strong>Contact Us:</strong> If you believe we have inadvertently collected information from a child, please contact us immediately.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 9: Changes to this policy-->
+            <div class="col-md-4 col-sm-6">
+                <button onclick="toggleMode(this)" class="accordionButton bg-dark text-white rounded-3 p-3 w-100">
+                    <span>
+                        <h3>Changes to This Policy</h3>
+                        <i class="bi bi-caret-up"></i>
+                    </span>
+                </button>
+                <div class="accordion_content">
+                    We may update this Privacy Policy from time to time. When we do, we will post the updated policy on this page and update the effective date. Please review this policy periodically to stay informed about how we are protecting your information. Your continued use of our services after any changes to this policy constitutes your acceptance of those changes.
+                    <ul>
+                        <li><strong>Notification:</strong> If significant changes are made, we will notify you via email or other communication channels.</li>
+                        <li><strong>Effective Date:</strong> The "Effective Date" at the top of this page reflects the latest update to the policy.</li>
+                        <li><strong>Review:</strong> We encourage you to review this policy regularly to understand how changes may impact you.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="border-top footer text-muted text-white">
+    <div class="text-white">
+        &copy; 2024 - VoyaVista - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+
+    <div class="socialIconsDivision">
+        <i class="bi bi-instagram fs-5 text-white"></i>
+        <i class="bi bi-facebook fs-5 text-white"></i>
+        <i class="bi bi-twitter-x fs-5 text-white"></i>
+        <i class="bi bi-tiktok fs-5 text-white"></i>
+    </div>
+
+    <div class="paymentIconsDivision">
+        <img class="img-fluid" src="https://brandlogos.net/wp-content/uploads/2016/07/mastercard-vector-logo-400x400.png" />
+        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4fzD_2wlaVx71EqR_AtxYfDH4gPk61xvBg&s" />
+        <img class="img-fluid" src="https://avatars.githubusercontent.com/u/10061420?s=400&v=4" />
+    </div>
+
+</footer>
