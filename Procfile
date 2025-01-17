@@ -1,1 +1,2 @@
-web: dotnet run
+web: dotnet TravelAgencyVoyavista.dll
+
