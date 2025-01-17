@@ -28,8 +28,8 @@
             <td>@customer.FirstName</td>
             <td>@customer.LastName</td>
             <td>@customer.Travelpackage.Name</td>
-            <td>@customer.paymentStatus</td>
-            <td>@customer.orderActive</td>
+                            <td>@(customer.paymentStatus ? "Paid" : "Unpaid")</td>
+            <td>@(customer.orderActive == true ? "Booked" : "No booking")</td>
                             <td>@customer.StartDate.ToString("yyyy-MM-dd")</td>
                             <td>@customer.EndDate.ToString("yyyy-MM-dd")</td>
                             <td>
