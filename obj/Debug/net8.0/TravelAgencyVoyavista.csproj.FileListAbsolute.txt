@@ -305,7 +305,6 @@ C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\n
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TravelAgencyVoyavista.props
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TravelAgencyVoyavista.props
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\TravelAg.CB356BE6.Up2Date
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\TravelAgencyVoyavista.dll
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\refint\TravelAgencyVoyavista.dll
