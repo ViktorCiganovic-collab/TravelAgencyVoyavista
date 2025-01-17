@@ -313,3 +313,4 @@ C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\n
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\TravelAgencyVoyavista.genruntimeconfig.cache
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\ref\TravelAgencyVoyavista.dll
 C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\PC\source\repos\TravelAgencyVoyavista\TravelAgencyVoyavista\obj\Debug\net8.0\TravelAgencyVoyavista.sourcelink.json

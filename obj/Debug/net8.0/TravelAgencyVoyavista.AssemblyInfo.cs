@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelAgencyVoyavista")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0c39c24f9494e96201931002f06e4950297a95e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22f368765e88c500ab470c3dbbd7f3b1e3b055e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelAgencyVoyavista")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelAgencyVoyavista")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
